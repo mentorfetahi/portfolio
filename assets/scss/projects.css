@@ -1,0 +1,199 @@
+/*HEADER*/
+* {
+  color: #191919;
+}
+
+h2 {
+  font-size: 3em;
+}
+
+body {
+  background-color: #e5e5e5;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #191919;
+  width: 100%;
+  padding: 1em 1em;
+}
+.header .header-name {
+  display: flex;
+  width: 40%;
+}
+.header .header-name h2 {
+  text-transform: uppercase;
+  border-radius: 10px;
+  transition: 0.2s ease-in-out all inherit;
+  color: #eee;
+  font-size: 2em;
+}
+.header .header-name h2:hover {
+  background-image: linear-gradient(to right, #00d5ff, 25%, #eee);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  cursor: default;
+}
+.header .navigation {
+  width: 60%;
+  display: flex;
+  justify-content: flex-start;
+}
+.header .navigation ul {
+  list-style-type: none;
+  display: flex;
+  gap: 1em;
+}
+.header .navigation ul li {
+  border-left: 2px solid transparent;
+  transition: 0.2s ease all;
+  padding: 0 0.5em;
+}
+.header .navigation ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #eee;
+}
+.header .navigation ul li:hover {
+  border-left: 2px solid rgba(238, 238, 238, 0.6666666667);
+}
+.header .logo {
+  height: 2em;
+  width: 20%;
+  background-image: url(../img/logo-white.svg);
+  background-repeat: no-repeat;
+  background-position: 100%;
+  opacity: 0.8;
+  position: fixed;
+  right: 1em;
+  mix-blend-mode: difference;
+}
+
+/*End of HEADER*/
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10em;
+  gap: 17em;
+}
+.main .welcome {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3em;
+  padding: 2em;
+  border-radius: 7px;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+.main .welcome h1 {
+  text-transform: uppercase;
+  font-size: 3.9em;
+}
+.main .welcome p {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 1.5em;
+  width: 55ch;
+  gap: 1.25em;
+}
+.main .welcome span {
+  font-size: 1.3em;
+  color: #999;
+  letter-spacing: 0.35em;
+  cursor: default;
+  transition: 0.5s ease all;
+}
+.main .welcome span:hover {
+  filter: blur(2px);
+}
+.main .welcome .scroll-down {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s ease all;
+}
+.main .welcome .scroll-down p {
+  width: 2em;
+  text-transform: uppercase;
+  cursor: default;
+}
+.main .welcome .scroll-down img {
+  transform: translateY(-15px);
+  animation: bounce 1.5s ease infinite;
+}
+.main .welcome .scroll-down:hover {
+  filter: blur(2px);
+}
+.main .project {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  width: 90%;
+  border-bottom: 2px solid #555;
+  flex-wrap: wrap;
+  padding-bottom: 2em;
+}
+.main .project .project-text {
+  padding: 2em;
+  width: 38%;
+  cursor: pointer;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25em;
+  transition: background-color 0.5s ease;
+}
+.main .project .project-text:hover {
+  background-color: rgba(25, 25, 25, 0.6);
+}
+.main .project h2 {
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  font-size: 3em;
+}
+.main .project p {
+  font-size: 1.5em;
+  cursor: default;
+}
+.main .project h2, .main .project p, .main .project h3 {
+  transition: color 0.5s ease;
+}
+.main .project .project-img {
+  position: absolute;
+  width: 700px;
+  display: flex;
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: -1;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.main .project .project-img img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-15px);
+  }
+  75% {
+    transform: translateY(15px);
+  }
+  100% {
+    transform: translateY(-15px);
+  }
+}/*# sourceMappingURL=projects.css.map */
